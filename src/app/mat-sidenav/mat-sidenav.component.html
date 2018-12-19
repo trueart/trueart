@@ -1,0 +1,58 @@
+<div class="example-container" [class.example-is-mobile]="mobileQuery.matches" >
+  <!--mat-sidenav-container class="example-sidenav-container"
+         [style.marginTop.px]="mobileQuery.matches ? 56 : 0">
+    <mat-sidenav opened="true"  #snav [mode]="mobileQuery.matches ? 'over' : 'side'"
+                  [fixedInViewport]="mobileQuery.matches" fixedTopGap="56" role="navigation"!-->
+  <mat-sidenav-container>
+    <mat-sidenav opened="false"  #snav  role="navigation">
+    <mat-nav-list (click)="snav.close()">
+      <a mat-list-item routerLink="/login" >Toile 2018</a>
+      <a mat-list-item routerLink="/signup">Toiles 2009</a>
+      <a mat-list-item routerLink="/training">Toiles 2008</a>
+      <a mat-list-item routerLink="/">Toiles 2007</a>     
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <mat-sidenav-content>
+      <mat-toolbar color="primary">
+          <div>
+            <a class="navbar-brand" routerLink="/">TRueaRT</a>
+          </div>
+          <div fxHide.xs  id="navbarSupportedContent">
+            <a class="nav-link" routerLink="/training" (click)="snav.toggle()">Accès au lessons</a>
+          </div>
+          <div fxFlex fxLayout fxLayoutAlign="flex-end" class="navigation-item">
+            <ul fxLayout fxLayoutGap='90px'>
+              <div>
+                  <button mat-icon-button (click)="snav.toggle()">
+                      <a class="navbar-brand">Menu</a>
+                      <mat-icon>menu</mat-icon>
+                  </button>
+                </div>
+              <div fxLayout ngbDropdown class="nav-item dropdown">
+                <a ngbDropdownToggle  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Connexion
+                </a>
+                <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a style="background-color: #600377;" class="dropdown-item" routerLink="/login">Connexion</a>
+                    <a style="background-color: #600377;" class="dropdown-item" routerLink="/signup">Inscription</a>
+                    <a style="background-color: #600377; text-decoration-color: white;" class="dropdown-item" >Déconnexion</a>
+                </div>
+              </div>            
+            </ul>
+          </div>
+      
+            <!--form class="form-inline my-2 my-lg-0">
+              <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+            </form!-->
+      
+        </mat-toolbar>
+        <main>
+            <router-outlet></router-outlet>
+        </main>    
+    
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+</div>

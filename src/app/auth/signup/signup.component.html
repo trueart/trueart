@@ -1,0 +1,17 @@
+<section class="signup-form">
+  <form  fxLayout="column" fxLayoutAlign="center center" #f="ngForm" (ngSubmit)="onSubmit(f)" >
+    <mat-form-field>
+      <input ngModel name="userid" matInput placeholder="Nom utilisateur" type="text" value="">
+    </mat-form-field> 
+    <mat-form-field>
+      <input ngModel name="email" matInput placeholder="email" type="text" value="">
+    </mat-form-field>         
+    <mat-form-field>
+      <input ngModel name="password" matInput placeholder="Mot de passe" type="password" value="">
+    </mat-form-field>
+    <mat-form-field>
+      <input ngModel name="passwordconfirm" matInput placeholder="Confirmer le mdp" type="password" value="">
+    </mat-form-field>    
+    <button type="submit" mat-raised-button  color="primary">Connecter</button>
+  </form>
+</section>

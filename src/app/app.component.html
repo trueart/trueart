@@ -1,0 +1,19 @@
+<div class="mat-app-background basic-container">
+    <div class="example-container" [class.example-is-mobile]="mobileQuery.matches" >
+        <mat-sidenav-container>
+            <mat-sidenav opened="false"  #snav  role="navigation">
+                <app-matnavlist (snavToggle)="snav.close()"></app-matnavlist>
+            </mat-sidenav>
+            <mat-sidenav-content>
+                <app-bs-toolbar (snavToggle)="snav.toggle()"></app-bs-toolbar>
+                <main>
+                    <router-outlet></router-outlet>
+                </main>
+            </mat-sidenav-content>
+        </mat-sidenav-container>
+    </div>
+</div>
+
+
+
+

@@ -1,0 +1,32 @@
+<div id="container"></div>
+<div class="row">
+  <div class="col-md-2">
+  </div>
+  <div class="col-md-8">
+    <ngb-carousel fxLayout>
+      <ng-template ngbSlide>
+        <img [src]="'assets/images/20180304_190025.mp4'" alt="slide">
+        <div class="carousel-caption">
+          <h3>First slide label</h3>
+          <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <img [src]="'http://lorempixel.com/500/500/?r=4'" alt="Random second slide">
+        <div class="carousel-caption">
+          <h3>Second slide label</h3>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+      </ng-template>
+      <ng-template ngbSlide>
+        <img [src]="'http://lorempixel.com/500/500/?r=5'" alt="Random third slide">
+        <div class="carousel-caption">
+          <h3>Third slide label</h3>
+          <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
+        </div>
+      </ng-template>
+    </ngb-carousel>
+  </div>
+  <div class="col-md-2">
+  </div>
+</div>

@@ -1,0 +1,18 @@
+/* You can add global styles to this file, and also import other style files */
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import "~bootstrap/dist/css/bootstrap.css";
+
+
+body { 
+    font-family: Roboto, Arial, sans-serif;
+    padding: 120px
+  }
+  
+  .basic-container {
+    padding: 30px;
+  }
+  
+  .version-info {
+    font-size: 8pt;
+    float: right;
+  }

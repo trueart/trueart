@@ -1,0 +1,34 @@
+<mat-toolbar color="primary">
+    <div>
+      <a class="navbar-brand" routerLink="/">TRueaRT</a>
+    </div>
+    <div fxHide.xs  id="navbarSupportedContent">
+      <a class="nav-link" routerLink="/training" (click)="onToggle()">Accès au lessons</a>
+    </div>
+    <div fxFlex fxLayout fxLayoutAlign="flex-end" class="navigation-item">
+      <ul fxLayout fxLayoutGap='90px'>
+        <div>
+            <button mat-icon-button (click)="onToggle()">
+                <a class="navbar-brand">Menu</a>
+                <mat-icon>menu</mat-icon>
+            </button>
+          </div>
+        <div fxLayout ngbDropdown class="nav-item dropdown">
+          <a ngbDropdownToggle  id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            Connexion
+          </a>
+          <div ngbDropdownMenu class="dropdown-menu" aria-labelledby="navbarDropdown">
+              <a style="background-color: #600377;" class="dropdown-item" routerLink="/login">Connexion</a>
+              <a style="background-color: #600377;" class="dropdown-item" routerLink="/signup">Inscription</a>
+              <a style="background-color: #600377; text-decoration-color: white;" class="dropdown-item" >Déconnexion</a>
+          </div>
+        </div>            
+      </ul>
+    </div>
+
+      <!--form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form!-->
+
+  </mat-toolbar>
